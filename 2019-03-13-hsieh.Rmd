@@ -8,3 +8,24 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+```{r}
+a <- 2
+```
+```{r}
+b <- 3
+```
+```{r}
+32 + a
+```
+
+```{r}
+c <- 49
+```
+```{r}
+a2 <- 5L
+```
+```{r}
+aVector <- c(5,6,7)
+```
+
+
