@@ -1,0 +1,61 @@
+---
+title: '2019-03-20'
+author: ""
+date: "3/20/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+c <- "你好"
+```
+```{r}
+blogical <- c(T,TRUE,F,FALSE)
+```
+```{r}
+studentmajors <- factor(c("經濟系,法律系,會計系"))
+```
+```{r}
+studentmajors
+```
+```{r}
+typeof(studentmajors)
+```
+```{r}
+live <- factor(c('基隆市','台北市','新北市'))
+```
+```{r}
+typeof(live)
+```
+```{r}
+levels(live)
+```
+```{r}
+as.integer(live )
+```
+```{r}
+stringInteger <- c("2","1","3")
+```
+```{r}
+trueInteger <- as.integer(stringInteger)
+```
+```{r}
+class(trueInteger)
+```
+```{r}
+library(lubridate)
+dtObject <- ymd_hms("2019-03-20 04:45:01") 
+```
+```{r}
+class(dtObject)
+```
+```{r}
+dtObject
+```
+```{r}
+as.double(dtObject)
+```
+
