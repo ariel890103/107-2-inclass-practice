@@ -4,8 +4,128 @@ author: "林茂廷"
 date: "3/27/2019"
 output: html_document
 ---
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(lubridate)
+
+dtObject<-ymd_hms("2019-03-27 00:02:53")
+```
+
+```{r}
+Sys.timezone()
+```
+
+```{r}
+twDateTime <- ymd_hms("2019-03-18 14:04:00", tz="Asia/Taipei")
+```
+
+```{r}
+LisbonDateTime <- with_tz(twDateTime,tzone="Europe/Lisbon")
+```
+
+```{r}
+class(dtObject)
+```
+
+```{r}
+mdy_hms("3-27-2019 15:50:00", tz="Asia/Taipei")
+```
+
+```{r}
+twDateTime <- mdy_hms("3-27-2019 15:50:00", tz="Asia/Taipei")
+```
+
+```{r}
+ymd("2018-09-11")
+```
+
+```{r}
+library(lubridate)
+mdy("March 3 ,2019")
+```
+
+```{r}
+a <- c(1,5,-9)
+b <- c(4,2,8)
+```
+
+```{r}
+aL <- c(1L,5L,-9)
+bL <- c(4L,2L,8L)
+```
+
+```{r}
+class(aL+bL)
+```
+```{r}
+class(a+bL)
+```
+
+```{r}
+a+b
+```
+```{r}
+a+6
+```
+
+```{r}
+twDateTime <- ymd_hms("2019-03-18 14:04:00", tz="Asia/Taipei")
+```
+
+```{r}
+twDateTime+1
+```
+
+```{r}
+twDateTime2 <- ymd("2019-08-11")
+```
+
+```{r}
+twDateTime3 <- ymd("2000-02-11")
+```
+
+```{r}
+class(twDateTime2 - twDateTime3)
+```
+
+```{r}
+startingDate <- ymd("2000-02-17")
+```
+```{r}
+startingDate + years(1)
+```
+
+```{r}
+startingDate + dyears(1)
+```
+
+```{r}
+x <- 6
+y <- 7
+```
+
+```{r}
+x == y
+x >= y
+x <= y
+x != y
+```
+
+```{r}
+x4 <- c(1,5,8)
+y4 <- c(5,8)
+
+x4 %in% y4
+
+```
+
+```{r}
+x5 <- c("台北市","新北市","高雄市")
+y5 <- c("台北市","新北市")
+
+y5 %in% x5
 ```
 
