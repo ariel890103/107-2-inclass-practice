@@ -1,0 +1,95 @@
+---
+title: '2019-04-10'
+author: "林茂廷"
+date: "4/10/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(stringr)
+```
+
+```{r}
+course <- c("個體經濟學","投資學","總體經濟學")
+```
+
+```{r}
+str_detect(course,"經濟學")
+
+```
+
+```{r}
+str_subset(course,"經濟學")
+```
+
+```{r}
+month <- c("2","5","3")
+day <- c("19","29","14")
+```
+
+```{r}
+char1 <- c("月","月","月")
+char2 <- c("日","日","日")
+```
+
+```{r}
+str_c(month,char1,day,char2)
+```
+
+```{r}
+dates <- c("2-11","3-16","9-1")
+str_split(dates,"-")
+```
+
+```{r}
+str_replace(dates,"-","/")
+```
+```{r}
+library(readr)
+githubData <- read_csv("https://raw.githubusercontent.com/tpemartin/github-data/master/githubData.csv")
+username <- githubData$`GitHub username`[11:16]
+reponame <- githubData$`GitHub repo name`[11:16]
+```
+
+```{r}
+"https://github.com"
+username
+reponame
+str_c("https://github.com",username,reponame,sep="/")
+```
+
+```{r}
+民國年月<-c("099/01","099/02","099/03")
+```
+
+```{r}
+str_split(民國年月,"/")
+```
+```{r}
+date1 <- c("099")
+date2 <- c("01")
+date2
+```
+```{r}
+a <- as.integer(date1) + 1911
+a
+```
+```{r}
+str_c("a,/,date2"")
+```
+
+
+
+
+
+
+
+
+
+
+
+
